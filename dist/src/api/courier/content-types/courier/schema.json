@@ -1,0 +1,26 @@
+{
+    "kind": "collectionType",
+    "collectionName": "couriers",
+    "info": {
+        "singularName": "courier",
+        "pluralName": "couriers",
+        "displayName": "Courier",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "vehicle_plate": {
+            "type": "string",
+            "required": true
+        },
+        "orders": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::order.order",
+            "mappedBy": "courier"
+        }
+    }
+}
